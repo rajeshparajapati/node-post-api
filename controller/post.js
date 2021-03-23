@@ -37,16 +37,32 @@ exports.getPost = (req,res)=>{
   })
 }
 
-exports.getAllBlogPosts = (req,res)=>{
-  Post.find({}).then(data=>{
+exports.getSinglePost  = (req,res)=>{
+  Post.findOne({_id:req.params.id}).then(data=>{
     return res.send({status:constant.SUCCESS_CODE,data:data})
   }).catch(err=>{
     return res.send({status:constant.DATABASE,message:err.message || constant.DATABASE_ERROR})
   })
 }
 
-exports.getSinglePost  = (req,res)=>{
-  Post.findOne({_id:req.params.id}).then(data=>{
+exports.getAllTags = (req,res)=>{
+  Post.aggregate([
+    { $group:{_id:"$tags" } }
+  ]).then(data=>{
+    return res.send({status:constant.SUCCESS_CODE,data:data})
+  }).catch(err=>{
+    return res.send({status:constant.DATABASE,message:err.message || constant.DATABASE_ERROR})
+  })
+
+}
+
+
+exports.getAllBlogPosts = (req,res)=>{
+  condition = {};
+  if(req.body.tags !="" && req.body.tags !=null){
+    condition = {tags:req.body.tags}
+  }
+  Post.find(condition).then(data=>{
     return res.send({status:constant.SUCCESS_CODE,data:data})
   }).catch(err=>{
     return res.send({status:constant.DATABASE,message:err.message || constant.DATABASE_ERROR})

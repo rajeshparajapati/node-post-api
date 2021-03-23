@@ -4,9 +4,9 @@ const dotenv = require("dotenv");
 const connectionDB = require("./database/database");
 const middleware = require("./middleware/middleware");
 const cors = require('cors')
-
 const app = express();
 
+// intialize cors
 app.use(cors());
 
 
@@ -24,8 +24,6 @@ dotenv.config({path:"config.env"});
 connectionDB.databaseConnection();
 
 // port intialize 
-
-
 PORT = process.env.PORT || 8080;
 
 // middleware 

@@ -5,10 +5,19 @@ const Post = require("../controller/post")
 
 /**
  * @description: User Post
- * @method: GET/get_all_posts
+ * @method: POST/get_all_posts
  */
 
-route.get('/get_all_posts',Post.getAllBlogPosts)
+route.post('/get_all_posts',Post.getAllBlogPosts)
+
+
+/**
+ * @description: User Tags
+ * @method: GET/get_all_tags
+ */
+
+ route.get('/get_all_tags',Post.getAllTags)
+
 
 
 

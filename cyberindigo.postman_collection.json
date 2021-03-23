@@ -1,0 +1,301 @@
+{
+	"variables": [],
+	"info": {
+		"name": "cyberindigo",
+		"_postman_id": "f3615c5f-b53f-61d7-3a39-9125fbca4e29",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Signup",
+			"request": {
+				"url": "http://localhost:3000/api/signup",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "rajesh",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "rajeshkumar2@yopmail.com",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "address",
+							"value": "janak puri",
+							"description": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "join_date",
+							"value": "0",
+							"description": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "latitude",
+							"value": "12",
+							"description": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "longitute",
+							"value": "14",
+							"description": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "kilometer",
+							"value": "25 KM",
+							"description": "",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Signin",
+			"request": {
+				"url": "http://localhost:3000/api/login",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "rajeshkumar2@yopmail.com",
+							"description": ""
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"description": ""
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Create Post",
+			"request": {
+				"url": "http://localhost:3000/api/post/createpost",
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwNTRkZDgwYTFhZTNlMWIxNDNhMWEyNyIsImlhdCI6MTYxNjMzNTI0NX0.M0nVn317mxb0T1FLmwAFgl_kQP9MRowabR75HAjua0U",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "title",
+							"value": "sadsadd",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "subtitle",
+							"value": "sdfsdsf",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "tags",
+							"value": "6054e4cddc273e21f9f97e0e",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "content",
+							"value": "sfsfsf sfsfs sfsfsf sfsfs sddfsff sfdsfsf sdfsfs sfsfsf sdfsdf sfsf sf",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "user_id",
+							"value": "",
+							"description": "",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Update Post",
+			"request": {
+				"url": "http://localhost:3000/api/post/updatepost/60575210481aa50b54102044",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					},
+					{
+						"key": "authorization",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwNTRkZDgwYTFhZTNlMWIxNDNhMWEyNyIsImlhdCI6MTYxNjMzNTI0NX0.M0nVn317mxb0T1FLmwAFgl_kQP9MRowabR75HAjua0U",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "content",
+							"value": "sfsfsf sfsfs sfsfsf sfsfs sddfsff sfdsfsf sdfsfs sfsfsf sdfsdf sfsf sf",
+							"description": ""
+						},
+						{
+							"key": "tags",
+							"value": "6054e4cddc273e21f9f97e0e",
+							"description": ""
+						},
+						{
+							"key": "subtitle",
+							"value": "demo112",
+							"description": ""
+						},
+						{
+							"key": "title",
+							"value": "1245112",
+							"description": ""
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Post",
+			"request": {
+				"url": "http://localhost:3000/api/post/deletepost/60575210481aa50b54102044",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwNTRkZDgwYTFhZTNlMWIxNDNhMWEyNyIsImlhdCI6MTYxNjMzNTI0NX0.M0nVn317mxb0T1FLmwAFgl_kQP9MRowabR75HAjua0U",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get User Posts",
+			"request": {
+				"url": "http://localhost:3000/api/post/getpost",
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwNTRkZDgwYTFhZTNlMWIxNDNhMWEyNyIsImlhdCI6MTYxNjMzNTI0NX0.M0nVn317mxb0T1FLmwAFgl_kQP9MRowabR75HAjua0U",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Posts",
+			"request": {
+				"url": "http://localhost:3000/f/api/post/get_all_posts",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"tags\":\"educatioon\"}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get Single Post",
+			"request": {
+				"url": "http://localhost:3000/api/post/get_single_post/6054e53e54f2013568c70ce0",
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwNTRkZDgwYTFhZTNlMWIxNDNhMWEyNyIsImlhdCI6MTYxNjQzMjQwMH0.vzLlXKKTvwIvjkprHm0U4A3k1Rtd-eWx6uCFn26xTec",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Tags",
+			"request": {
+				"url": "http://localhost:3000/f/api/post/get_all_tags",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
